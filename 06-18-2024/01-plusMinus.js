@@ -5,7 +5,7 @@
 // Note: This challenge introduces precision problems. The test cases are scaled to six decimal places, though answers with absolute error of up to
 // are acceptable.
 
-'use strict';
+"use strict";
 
 // process.stdin.resume();
 // process.stdin.setEncoding('utf-8');
@@ -34,21 +34,21 @@
  */
 
 function plusMinus(arr) {
-  var mas = 0,
-    men = 0,
-    cer = 0;
+  let pos = 0;
+  let neg = 0;
+  let zer = 0;
   const n = arr.length;
-  console.log(mas, men, cer);
+  console.log(pos, neg, zer);
   arr.map((el) =>
-    el > 0 ? (mas += 1 / n) : el < 0 ? (men += 1 / n) : (cer += 1 / n)
+    el > 0 ? (pos += 1 / n) : el < 0 ? (neg += 1 / n) : (zer += 1 / n)
   );
-  console.log(mas, men, cer);
+  console.log(pos, neg, zer);
   return console.log(
-    mas.toFixed(6),
-    '\n',
-    men.toFixed(6),
-    '\n',
-    cer.toFixed(6)
+    pos.toFixed(6),
+    "\n",
+    neg.toFixed(6),
+    "\n",
+    zer.toFixed(6)
   );
 }
 
