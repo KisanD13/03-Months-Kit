@@ -4,7 +4,7 @@
 // arr = [1,3,5,7,9]
 // The minimum sum is 1+3+5+7=16 and the maximum sum 3+5+7+9=24 . The function prints 16,24
 
-'use strict';
+"use strict";
 
 // process.stdin.resume();
 // process.stdin.setEncoding('utf-8');
@@ -34,22 +34,25 @@
 
 function miniMaxSum(arr) {
   // Write your code here
-  let miniSum = 0;
-  let maxSum = 0;
-  const sortedArr = arr.sort((a, b) => a - b);
+  arr.sort((a, b) => a - b);
+  let sum = 0;
 
-  for (let index = 0; index < sortedArr.length - 1; index++) {
-    miniSum += arr[index];
+  // for (let index = 0; index < sortedArr.length - 1; index++) {
+  //   miniSum += arr[index];
+  // }
+
+  // for (let index = 1; index < sortedArr.length; index++) {
+  //   maxSum += arr[index];
+  // }
+
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
   }
 
-  for (let index = 1; index < sortedArr.length; index++) {
-    maxSum += arr[index];
-  }
-
-  return console.log(miniSum, maxSum);
+  return console.log(sum - arr[arr.length - 1], sum - arr[0]);
 }
 
-miniMaxSum([1, 3, 5, 7, 9]);
+miniMaxSum([1, 3, 9, 7, 5]);
 miniMaxSum([1, 2, 3, 4, 5]);
 
 // function main() {

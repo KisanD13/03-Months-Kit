@@ -38,11 +38,9 @@ function plusMinus(arr) {
   let neg = 0;
   let zer = 0;
   const n = arr.length;
-  console.log(pos, neg, zer);
   arr.map((el) =>
     el > 0 ? (pos += 1 / n) : el < 0 ? (neg += 1 / n) : (zer += 1 / n)
   );
-  console.log(pos, neg, zer);
   return console.log(
     pos.toFixed(6),
     "\n",
